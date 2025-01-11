@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="ExampleSuite" thread-count="4" parallel="classes" >
+    <test name="SuiteTests" >
+        <classes>
+            <class name="suiteExample.DemoOne"/>
+            <class name="suiteExample.DemoTwo"/>
+        </classes>
+    </test>
+    <test name="SuiteTests_Activity5" >
+        <groups>
+        	<run>
+        		<include name="header"></include>
+        	</run>
+        </groups>
+        <classes>
+        	<class name="demo.Activity5"></class>
+        </classes>
+    </test>
+    <test name="SuiteTests_Activity5_buttons" >
+        <groups>
+        	<run>
+        		<include name="buttons"></include>
+        	</run>
+        </groups>
+        <classes>
+        	<class name="demo.Activity5"></class>
+        </classes>
+    </test>
+    <test name="SuiteTests_Activity6" >
+    	<parameter name="username" value="admin"></parameter>
+    	<parameter name="password" value="password"></parameter>
+        <classes>
+        	<class name="demo.Activity6"></class>
+        </classes>
+    </test>
+    <test name="SuiteTests_all" >
+        <classes>
+        	<class name="demo.Activity1"></class>
+        	<class name="demo.Activity2"></class>
+        	<class name="demo.Activity3"></class>
+        	<class name="demo.Activity7"></class>
+        </classes>
+    </test>
+    
+</suite>
+
